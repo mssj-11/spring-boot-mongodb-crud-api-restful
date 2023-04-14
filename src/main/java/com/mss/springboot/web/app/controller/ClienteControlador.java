@@ -33,12 +33,12 @@ public class ClienteControlador {
 	//	Crear
 	@PostMapping
 	public ResponseEntity<?> saveClient(@RequestBody Cliente cliente){
-		try {
-			Cliente client = clienteRepositorio.save(cliente);
-			return new ResponseEntity<Cliente>(client, HttpStatus.CREATED);
-		}catch(Exception e) {
-			return new ResponseEntity<String>(e.getCause().toString(), HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+	    	try {
+				Cliente client = clienteRepositorio.save(cliente);
+				return new ResponseEntity<Cliente>(client, HttpStatus.CREATED);
+			}catch(Exception e) {
+				return new ResponseEntity<String>(e.getCause().toString(), HttpStatus.INTERNAL_SERVER_ERROR);
+			}
 	}
 	
 	
@@ -88,6 +88,7 @@ public class ClienteControlador {
 			return new ResponseEntity<String>(e.getCause().toString(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
 	
 	
 	
