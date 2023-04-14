@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("Cliente")
 public class Cliente {
 	
+	
 	@Id
 	private Integer id;
 	private String nombre;
@@ -39,7 +40,6 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	
 	
 }
