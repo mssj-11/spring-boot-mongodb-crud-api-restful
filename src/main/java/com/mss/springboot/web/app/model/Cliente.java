@@ -3,14 +3,19 @@ package com.mss.springboot.web.app.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import jakarta.validation.constraints.NotBlank;
+
 
 @Document("Cliente")
 public class Cliente {
 	
 	@Id
 	private Integer id;
+	@NotBlank(message = "El nombre no puede estar vacío")
 	private String nombre;
+	@NotBlank(message = "La ciudad no puede estar vacía")
 	private String ciudad;
+	@NotBlank(message = "El correo no puede estar vacío")
 	private String email;
 	
 	
